@@ -6,9 +6,12 @@ plugins {
     id 'cpp-application'
     id 'xcode'
     id 'visual-studio'
+    id 'cpp-unit-test'
 }
 
 application {
+    targetMachines.add(machines.linux.architecture('x86'))
+
     binaries.configureEach {
         def compileTask = compileTask.get()
         compileTask.source.from fileTree(dir: "src/main/c", include: "**/*.c")
