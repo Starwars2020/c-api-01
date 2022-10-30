@@ -15,6 +15,7 @@ application {
     binaries.configureEach {
         def compileTask = compileTask.get()
         compileTask.source.from fileTree(dir: "src/main/c", include: "**/*.c")
+        compileTask.macros.put("NDEBUG", null)
         if (toolChain instanceof VisualCpp) {
             compileTask.compilerArgs = ["/TC"]
         } else if (toolChain instanceof GccCompatibleToolChain) {
