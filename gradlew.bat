@@ -1,2 +1,3 @@
 @echo off
-call ..\..\gradlew.bat %*
+REM call ..\..\gradlew.bat %*
+call .\gradle\gradlew.bat %*
