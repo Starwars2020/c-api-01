@@ -29,7 +29,6 @@ podTemplate(
 	
         stage('Build a gradle project'){
             container('gradle'){
-                sh 'chmod 755 ./gradle/gradlew'
                 sh 'chmod 755 ./gradlew'
                 sh './gradlew assemble'
             }
