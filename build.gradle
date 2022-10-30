@@ -10,8 +10,6 @@ plugins {
 
 application {
     binaries.configureEach {
-        macros.put("NDEBUG", null)
-        
         def compileTask = compileTask.get()
         compileTask.source.from fileTree(dir: "src/main/c", include: "**/*.c")
         if (toolChain instanceof VisualCpp) {
