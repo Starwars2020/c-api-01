@@ -10,7 +10,7 @@ plugins {
 }
 
 application {
-    targetMachines.add(machines.linux.architecture('x86'))
+    targetMachines.add(machines.linux.x86_64)
 
     binaries.configureEach {
         def compileTask = compileTask.get()
